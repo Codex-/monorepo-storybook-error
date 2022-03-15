@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-storybook-issue",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "clean": "rimraf packages/**/*/.rollup.cache packages/**/node_modules/.cache packages/**/node_modules/.vite-storybook packages/**/dist **/storybook-static **/*/*.tsbuildinfo",
+    "components:storybook": "npm run build && npm -w @monorepo/components run storybook"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2"
+  },
+  "workspaces": [
+    "packages/components"
+  ]
+}

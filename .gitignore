@@ -1,0 +1,9 @@
+**/node_modules
+
+packages/**/.rollup.cache
+packages/**/dist
+packages/**/lib
+
+**/*.tsbuildinfo
+
+.DS_STORE
